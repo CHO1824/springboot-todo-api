@@ -1,0 +1,8 @@
+[build]
+builder = "NIXPACKS"
+
+[nixpacks]
+language = "java"
+jdkVersion = "21"           # 위 pom 설정에 맞춤(21로 빌드하면 21로 변경)
+buildCommand = "mvn -DskipTests clean package"
+startCommand = "java -Dserver.port=${PORT} -jar target/app.jar"
