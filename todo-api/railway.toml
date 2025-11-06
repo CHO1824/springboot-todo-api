@@ -1,0 +1,9 @@
+# railway.toml
+[build]
+builder = "NIXPACKS"
+
+[nixpacks]
+language = "java"
+jdkVersion = "21"
+buildCommand = "mvn -DskipTests clean package"
+startCommand = "java -Dserver.port=${PORT} -jar target/*.jar"
